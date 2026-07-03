@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#050505;
+  color:white;
+  font-family:'Inter',sans-serif;
+  overflow-x:hidden;
+}
+
+section{
+  padding:120px 10%;
+}
+
+.gradient-text{
+  background:linear-gradient(90deg,#ffffff,#60a5fa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.navbar{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  z-index:999;
+  padding:25px 10%;
+  backdrop-filter:blur(20px);
+  display:flex;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:2rem;
+  font-weight:800;
+}
+
+.links{
+  display:flex;
+  gap:30px;
+}
+
+.links a{
+  color:white;
+  text-decoration:none;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero-logo{
+  width:320px;
+  margin-bottom:40px;
+  filter:drop-shadow(0 0 40px #3b82f6);
+}
+
+.hero h1{
+  font-size:5rem;
+}
+
+.hero p{
+  max-width:700px;
+  margin:20px 0;
+  color:#aaa;
+  font-size:1.2rem;
+}
+
+.hero-btn{
+  padding:16px 35px;
+  background:#2563eb;
+  color:white;
+  text-decoration:none;
+  border-radius:50px;
+  transition:.3s;
+}
+
+.hero-btn:hover{
+  transform:translateY(-4px);
+}
+
+.hero-buttons{
+  display:flex;
+  gap:15px;
+  margin-top:30px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.btn-primary{
+  background:#25D366;
+  padding:14px 28px;
+  border-radius:50px;
+  color:black;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s;
+  box-shadow:0 0 25px rgba(37,211,102,0.2);
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 40px rgba(37,211,102,0.35);
+}
+
+.btn-secondary{
+  border:1px solid rgba(255,255,255,0.2);
+  padding:14px 28px;
+  border-radius:50px;
+  color:white;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.btn-secondary:hover{
+  border-color:#3b82f6;
+  transform:translateY(-3px);
+}
+
+.orb{
+  position:fixed;
+  border-radius:50%;
+  filter:blur(120px);
+  z-index:-1;
+}
+
+.orb1{
+  width:500px;
+  height:500px;
+  background:#2563eb;
+  top:-100px;
+  left:-100px;
+  opacity:.3;
+}
+
+.orb2{
+  width:600px;
+  height:600px;
+  background:#60a5fa;
+  right:-200px;
+  bottom:-200px;
+  opacity:.15;
+}
+
+.cursor-glow{
+  width:300px;
+  height:300px;
+  position:fixed;
+  pointer-events:none;
+  border-radius:50%;
+  background:rgba(59,130,246,.15);
+  transform:translate(-50%,-50%);
+  filter:blur(80px);
+  z-index:-1;
+}
+
+#about{
+  text-align:center;
+}
+
+#about h2{
+  font-size:3rem;
+  margin-bottom:20px;
+}
+
+#about h3{
+  font-size:4rem;
+  margin-bottom:30px;
+}
+
+#about p{
+  max-width:900px;
+  margin:auto;
+  color:#aaa;
+  line-height:1.8;
+}
+
+.section-title{
+  text-align:center;
+  font-size:3rem;
+  margin-bottom:60px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.glass-card{
+  padding:40px;
+  border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.03);
+  backdrop-filter:blur(20px);
+  border-radius:25px;
+  transition:.4s;
+}
+
+.glass-card:hover{
+  transform:translateY(-10px);
+  border-color:#3b82f6;
+}
+
+.glass-card h3{
+  margin:20px 0;
+}
+
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.portfolio-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:25px;
+  height:450px;
+}
+
+.portfolio-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.7s;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    transparent,
+    rgba(0,0,0,.95)
+  );
+
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:30px;
+
+  opacity:0;
+  transition:.5s;
+}
+
+.portfolio-card:hover img{
+  transform:scale(1.15);
+}
+
+.portfolio-card:hover .overlay{
+  opacity:1;
+}
+
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:120px;
+  text-align:center;
+}
+
+.stats h2{
+  font-size:5rem;
+  background:linear-gradient(
+  90deg,
+  #fff,
+  #60a5fa
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.stats p{
+  color:#888;
+}
+
+.cta{
+  text-align:center;
+  padding:180px 10%;
+}
+
+.cta h2{
+  font-size:5rem;
+  margin-bottom:20px;
+}
+
+.cta p{
+  color:#888;
+  margin-bottom:40px;
+  font-size:1.3rem;
+}
+
+.footer{
+  padding:80px 10%;
+  border-top:1px solid rgba(255,255,255,.08);
+  text-align:center;
+}
+
+.footer img{
+  width:90px;
+  margin-bottom:20px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:20px;
+}
+
+.footer-links a{
+  color:#888;
+  text-decoration:none;
+}
+
+.footer-buttons{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  margin-top:25px;
+  flex-wrap:wrap;
+}
+
+.logo span{
+  color:#3b82f6;
+  font-weight:300;
+  margin-left:6px;
+}
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+.process-card{
+  padding:35px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(20px);
+  transition:.3s;
+}
+
+.process-card:hover{
+  transform:translateY(-8px);
+  border-color:#3b82f6;
+}
+
+.process-num{
+  font-size:1.5rem;
+  font-weight:800;
+  color:#3b82f6;
+}
+
+.stack-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.stack-card{
+  padding:18px 28px;
+  border-radius:50px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  color:white;
+  font-weight:500;
+  transition:.3s;
+  cursor:default;
+}
+
+.stack-card:hover{
+  border-color:#3b82f6;
+  box-shadow:0 0 20px rgba(59,130,246,0.3);
+};
+
+@media(max-width:992px){
+
+  .hero h1{
+    font-size:3rem;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .portfolio-grid{
+    grid-template-columns:1fr;
+  }
+
+  .stats{
+    flex-direction:column;
+    gap:50px;
+  }
+
+  .cta h2{
+    font-size:3rem;
+  }
+
+  #about h3{
+    font-size:2.5rem;
+  }
+
+  .links{
+    display:none;
+  }
+};
