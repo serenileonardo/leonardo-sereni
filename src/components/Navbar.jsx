@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   return (
@@ -7,8 +8,13 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className="navbar"
     >
-      <div className="logo">SERENI<span>studio</span></div>
-
+      <div className="brand">
+        <img src={logo} alt="LS" />
+        <div>
+          <span className="brand-main">SERENI</span>
+          <span className="brand-sub">studio</span>
+        </div>
+      </div>
       <div className="links">
         <a href="#about">Chi Sono</a>
         <a href="#stack">Stack</a>

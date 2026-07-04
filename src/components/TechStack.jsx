@@ -17,7 +17,7 @@ export default function TechStack() {
     <section id="stack">
 
       <h2 className="section-title">
-        Tech Stack
+        Come realizzo i miei progetti.
       </h2>
 
       <div className="stack-grid">

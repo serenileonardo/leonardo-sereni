@@ -10,12 +10,15 @@ import Footer from "./components/Footer";
 import Background from "./components/Background";
 import CursorGlow from "./components/CursorGlow";
 import Stats from "./components/Stats";
+import Loader from "./components/Loader";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
     <>
-      <CursorGlow />
+      <Loader />
       <Background />
+      <CursorGlow />
       <Navbar />
       <Hero />
       <About />
@@ -25,6 +28,7 @@ function App() {
       <Portfolio />
       <Stats />
       <CTA />
+      <WhatsAppButton />
       <Footer />
     </>
   );

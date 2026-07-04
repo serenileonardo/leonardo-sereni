@@ -35,7 +35,7 @@ export default function Hero() {
       <img src={logo} className="hero-logo" />
 
       <h1 ref={titleRef} className="gradient-text">
-        Creo esperienze digitali che convertono
+        Creo esperienze digitali che prendono vita.
       </h1>
 
       <p ref={textRef}>
