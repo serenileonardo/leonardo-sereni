@@ -1,11 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
-
+import { BrowserRouter } from "react-router-dom";
 import Lenis from "lenis";
 
-// Smooth scroll init (globale)
+import App from "./App.jsx";
+import ErrorBoundary from "./components/ErrorBoundary.jsx";
+import "./index.css";
+
+// Smooth scroll globale
 const lenis = new Lenis();
 
 function raf(time) {
@@ -17,6 +19,10 @@ requestAnimationFrame(raf);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <ErrorBoundary>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ErrorBoundary>
   </StrictMode>
 );
