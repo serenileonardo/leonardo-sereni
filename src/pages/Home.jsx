@@ -9,7 +9,6 @@ import Process from "../components/Process";
 import TechStack from "../components/TechStack";
 import Portfolio from "../components/Portfolio";
 import Stats from "../components/Stats";
-import CTA from "../components/CTA";
 import WhatsAppButton from "../components/WhatsAppButton";
 import Footer from "../components/Footer";
 
@@ -27,7 +26,6 @@ export default function Home() {
       <TechStack />
       <Portfolio />
       <Stats />
-      <CTA />
       <WhatsAppButton />
       <Footer />
     </>
