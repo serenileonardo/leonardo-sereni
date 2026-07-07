@@ -1,8 +1,8 @@
+import LegalLayout from "../components/LegalLayout";
+
 export default function CookiePolicy() {
   return (
-    <main className="legal-page">
-      <h1>Cookie Policy</h1>
-
+    <LegalLayout title="Cookie Policy">
       <p>
         Questo sito utilizza esclusivamente cookie tecnici necessari al corretto
         funzionamento del sito, se presenti.
@@ -35,6 +35,6 @@ export default function CookiePolicy() {
       </p>
 
       <p>Ultimo aggiornamento: 2026.</p>
-    </main>
+    </LegalLayout>
   );
 }

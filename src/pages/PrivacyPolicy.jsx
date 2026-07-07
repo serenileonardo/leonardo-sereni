@@ -1,8 +1,8 @@
+import LegalLayout from "../components/LegalLayout";
+
 export default function PrivacyPolicy() {
   return (
-    <main className="legal-page">
-      <h1>Privacy Policy</h1>
-
+    <LegalLayout title="Privacy Policy">
       <p>
         La presente informativa descrive le modalità di trattamento dei dati
         personali raccolti tramite questo sito web.
@@ -51,9 +51,9 @@ export default function PrivacyPolicy() {
 
       <h2>Aggiornamenti</h2>
       <p>
-        La presente informativa può essere aggiornata nel tempo. Ultimo
-        aggiornamento: 2026.
+        La presente informativa può essere aggiornata nel tempo.
+        Ultimo aggiornamento: 2026.
       </p>
-    </main>
+    </LegalLayout>
   );
 }

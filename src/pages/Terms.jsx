@@ -1,8 +1,8 @@
+import LegalLayout from "../components/LegalLayout";
+
 export default function Terms() {
   return (
-    <main className="legal-page">
-      <h1>Termini e Condizioni</h1>
-
+    <LegalLayout title="Termini e Condizioni">
       <p>
         Le informazioni presenti su questo sito hanno finalità informative e
         promozionali relative ai servizi di sviluppo web offerti da SERENI
@@ -37,6 +37,6 @@ export default function Terms() {
       </p>
 
       <p>Ultimo aggiornamento: 2026.</p>
-    </main>
+    </LegalLayout>
   );
 }

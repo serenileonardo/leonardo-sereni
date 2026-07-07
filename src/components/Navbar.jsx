@@ -11,23 +11,23 @@ export default function Navbar() {
   };
 
   const menuLinks = [
-    {
-      label: "Chi Sono",
-      href: "#about",
-    },
-    {
-      label: "Servizi",
-      href: "#stack",
-    },
-    {
-      label: "Portfolio",
-      href: "#portfolio",
-    },
-    {
-      label: "Contatti",
-      href: "#contact",
-    },
-  ];
+  {
+    label: "Chi Sono",
+    href: "/#about",
+  },
+  {
+    label: "Servizi",
+    href: "/#stack",
+  },
+  {
+    label: "Portfolio",
+    href: "/#portfolio",
+  },
+  {
+    label: "Contatti",
+    href: "/#contact",
+  },
+];
 
   return (
     <>
