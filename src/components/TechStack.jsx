@@ -22,11 +22,7 @@ const features = [
     title: "Design Moderno",
     text: "Interfacce eleganti, curate nei dettagli e studiate per valorizzare il tuo brand.",
   },
-  {
-    icon: <ShieldCheck size={34} />,
-    title: "Affidabilità",
-    text: "Codice pulito, tecnologie moderne e attenzione alla qualità in ogni fase dello sviluppo.",
-  },
+  
 ];
 
 const tech = [
