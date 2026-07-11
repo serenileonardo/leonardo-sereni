@@ -1,7 +1,10 @@
-Options -MultiViews
-
 RewriteEngine On
 RewriteBase /
+
+<IfModule mod_headers.c>
+    Header always unset Alt-Svc
+    Header always set Alt-Svc "clear"
+</IfModule>
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
