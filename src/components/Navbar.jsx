@@ -41,8 +41,8 @@ export default function Navbar() {
           <img src={logo} alt="Leonardo Sereni Logo" />
 
           <div>
-            <span className="brand-main">SERENI</span>
-            <span className="brand-sub">studio</span>
+            <span className="brand-main">LS</span>
+            <span className="brand-sub">Studio</span>
           </div>
         </a>
 
