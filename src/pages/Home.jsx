@@ -11,11 +11,12 @@ import Portfolio from "../components/Portfolio";
 import Stats from "../components/Stats";
 import WhatsAppButton from "../components/WhatsAppButton";
 import Footer from "../components/Footer";
+import Loader from "../components/Loader"
 
 export default function Home() {
   return (
     <>
-      
+      <Loader />
       <Background />
       <CursorGlow />
       <Navbar />
