@@ -1,16 +1,51 @@
-# React + Vite
+# SERENI studio — sito portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portfolio personale di Leonardo Sereni, sviluppato con React e Vite.
 
-Currently, two official plugins are available:
+## Avvio del progetto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Apri la cartella in Visual Studio Code e usa il terminale:
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Vite mostrerà l'indirizzo locale da aprire nel browser, normalmente `http://localhost:5173`.
 
-## Expanding the Oxlint configuration
+## Build di produzione
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm run build
+```
+
+I file pronti per la pubblicazione vengono generati nella cartella `dist`.
+
+## Pubblicazione su Aruba
+
+Carica **il contenuto interno della cartella `dist`** nella cartella principale dell'hosting, insieme al file `.htaccess` già incluso.
+
+La cartella di produzione contiene anche:
+
+- `robots.txt`
+- `sitemap.xml`
+- favicon
+- web manifest
+- immagine Open Graph 1200×630
+- regole base di cache, sicurezza e routing React
+
+## Struttura principale
+
+- `src/components`: sezioni e componenti riutilizzabili
+- `src/pages`: home, pagine legali e pagina 404
+- `public`: file SEO, immagini pubbliche e configurazione Aruba
+- `dist`: build pronta da caricare online
+
+## Controlli
+
+```bash
+npm run lint
+npm run build
+```
+
+Il progetto non utilizza più GSAP o Lenis: le animazioni sono gestite con Framer Motion e CSS, con supporto a `prefers-reduced-motion`.

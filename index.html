@@ -2,66 +2,74 @@
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
-
-    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon / Logo browser tab -->
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <link rel="apple-touch-icon" href="/logo.png" />
-
-    <!-- SEO Base -->
-    <title>SERENI Studio | Web Developer a Roma</title>
-
+    <title>SERENI studio | Siti web moderni a Roma</title>
     <meta
       name="description"
-      content="SERENI studio di Leonardo Sereni. Realizzo siti web moderni, veloci e responsive per aziende, professionisti e attività che vogliono migliorare la propria presenza online."
+      content="Leonardo Sereni realizza siti web moderni, veloci e responsive per aziende, professionisti e attività locali a Roma e da remoto."
     />
-
-    <meta
-      name="keywords"
-      content="SERENI studio, Leonardo Sereni, web developer Roma, sviluppatore web Roma, siti web professionali, siti web responsive, landing page, React developer, sviluppo siti web"
-    />
-
     <meta name="author" content="Leonardo Sereni" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#05070b" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    <!-- Canonical: sostituisci con il tuo dominio reale -->
     <link rel="canonical" href="https://www.serenistudio.it/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Colore barra browser mobile -->
-    <meta name="theme-color" content="#050505" />
-
-    <!-- Open Graph / Anteprima social -->
     <meta property="og:locale" content="it_IT" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="SERENI studio | Web Developer a Roma" />
+    <meta property="og:title" content="SERENI studio | Siti web moderni a Roma" />
     <meta
       property="og:description"
-      content="Siti web moderni, veloci e progettati per trasformare visitatori in clienti."
+      content="Siti web moderni, veloci e progettati per trasformare le visite in contatti reali."
     />
     <meta property="og:url" content="https://www.serenistudio.it/" />
     <meta property="og:site_name" content="SERENI studio" />
-    <meta property="og:image" content="https://www.serenistudio.it/logo.png" />
-    <meta property="og:image:alt" content="Logo SERENI studio" />
+    <meta property="og:image" content="https://www.serenistudio.it/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="SERENI studio, siti web moderni a Roma" />
 
-    <!-- Twitter / X Preview -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="SERENI studio | Web Developer a Roma" />
+    <meta name="twitter:title" content="SERENI studio | Siti web moderni a Roma" />
     <meta
       name="twitter:description"
-      content="Realizzo siti web moderni, responsive e professionali per aziende e professionisti."
+      content="Siti web moderni, responsive e professionali per aziende e professionisti."
     />
-    <meta name="twitter:image" content="https://www.serenistudio.it/logo.png" />
+    <meta name="twitter:image" content="https://www.serenistudio.it/og-image.png" />
 
-    <!-- Sicurezza base -->
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
-
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Leonardo Sereni",
+        "jobTitle": "Web Developer",
+        "url": "https://www.serenistudio.it/",
+        "email": "mailto:serenileonardo.web@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Roma",
+          "addressCountry": "IT"
+        },
+        "sameAs": ["https://github.com/serenileonardo"],
+        "knowsAbout": [
+          "Web development",
+          "Responsive web design",
+          "React",
+          "JavaScript",
+          "User experience"
+        ]
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
-
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

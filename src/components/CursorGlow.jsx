@@ -1,22 +1,29 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function CursorGlow() {
+  const glowRef = useRef(null);
 
   useEffect(() => {
+    const glow = glowRef.current;
+    const finePointer = window.matchMedia("(pointer: fine)");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-    const glow = document.querySelector(".cursor-glow");
+    if (!glow || !finePointer.matches || reducedMotion.matches) return undefined;
 
-    const move = (e) => {
-      glow.style.left = `${e.clientX}px`;
-      glow.style.top = `${e.clientY}px`;
+    let frameId;
+    const move = (event) => {
+      cancelAnimationFrame(frameId);
+      frameId = requestAnimationFrame(() => {
+        glow.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0)`;
+      });
     };
 
-    window.addEventListener("mousemove", move);
-
-    return () =>
-      window.removeEventListener("mousemove", move);
-
+    window.addEventListener("pointermove", move, { passive: true });
+    return () => {
+      cancelAnimationFrame(frameId);
+      window.removeEventListener("pointermove", move);
+    };
   }, []);
 
-  return <div className="cursor-glow"></div>;
+  return <div ref={glowRef} className="cursor-glow" aria-hidden="true" />;
 }
